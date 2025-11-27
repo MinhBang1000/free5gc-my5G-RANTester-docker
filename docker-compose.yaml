@@ -16,7 +16,7 @@ services:
           - tester.free5gc.org
 
   iperf:
-    image: mlabbe/iperf:latest
+    image: networkstatic/iperf3
     container_name: iperf
     ports:
       - 5001:5001
