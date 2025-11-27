@@ -13,7 +13,7 @@ WORKDIR /workspace/my5G-RANTester/cmd
 RUN go build -o app
 
 # Install iperf
-RUN apt-get update && apt-get install -y iperf3
+RUN apt-get update && apt-get install -y iperf
 
 # Config files volume
 VOLUME [ "/workspace/my5G-RANTester/config" ]
