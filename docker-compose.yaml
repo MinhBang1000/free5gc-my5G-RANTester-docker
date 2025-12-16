@@ -28,5 +28,8 @@ services:
 
 networks:
   default:
-    external:
-      name: "free5gc-compose_default"
+    external: true
+    name: "free5gc-compose_default"
+  metrics_net:
+    external: true
+    name: coletordemetricas-dockerstats_coleta
