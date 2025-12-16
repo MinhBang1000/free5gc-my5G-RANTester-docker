@@ -14,7 +14,6 @@ services:
       default:
         aliases:
           - tester.free5gc.org
-      metrics_net: {}
 
   iperf:
     image: mlabbe/iperf:latest
@@ -25,13 +24,9 @@ services:
     networks:
       default:
         aliases:
-          - iperf
           - iperf.free5gc.org
 
 networks:
   default:
     external:
       name: "free5gc-compose_default"
-  metrics_net:
-    external:
-      name: coletordemetricas-dockerstats_coleta
