@@ -14,6 +14,7 @@ services:
       default:
         aliases:
           - tester.free5gc.org
+      metrics_net: {}   # <-- this is the key fix
 
   iperf:
     image: mlabbe/iperf:latest
