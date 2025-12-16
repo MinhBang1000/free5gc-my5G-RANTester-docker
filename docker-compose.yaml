@@ -3,7 +3,6 @@ services:
   my5grantester:
     build:
       context: ./
-    container_name: my5grantester
     privileged: true
     command: bash -c "apt update && apt install -y iproute2 && ./app ${TEST_PARAMETERS}"
     volumes:
@@ -14,7 +13,6 @@ services:
       default:
         aliases:
           - tester.free5gc.org
-      metrics_net: {}   # <-- this is the key fix
 
   iperf:
     image: mlabbe/iperf:latest
